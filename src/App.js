@@ -1,5 +1,12 @@
+import Homepage from './Pages/Homepage';
+import Nav from './components/Nav';
+
 function App() {
-  return <div></div>;
+  return (
+    <div>
+      <Homepage />
+    </div>
+  );
 }
 
 export default App;
