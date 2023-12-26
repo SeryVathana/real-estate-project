@@ -1,4 +1,8 @@
+import { Link } from 'react-router-dom';
+
 function Nav() {
+  const user = true;
+
   return (
     <div className='max-w-screen border-b border-gray-300'>
       <div className='navbar bg-base-100 flex justify-between max-w-screen-2xl mx-auto'>
@@ -48,39 +52,75 @@ function Nav() {
               </ul>
             </div>
           </div>
-          <a href='/' className='text-2xl font-semibold'>
+          <Link to='/' className='text-2xl font-semibold'>
             Real Estate
-          </a>
+          </Link>
         </div>
         <div className=' hidden lg:flex'>
           <ul className='menu menu-horizontal px-1'>
             <li>
-              <a href='/browse'>Browse</a>
+              <Link to='/browse'>Browse</Link>
             </li>
             <li>
               <details>
                 <summary>Categories</summary>
                 <ul className='p-2'>
                   <li>
-                    <a>Villa</a>
+                    <Link to={'/'}>Villa</Link>
                   </li>
                   <li>
-                    <a>House</a>
+                    <Link to={'/'}>House</Link>
                   </li>
                 </ul>
               </details>
             </li>
             <li>
-              <a>About Us</a>
+              <Link to={'/'}>About Us</Link>
             </li>
           </ul>
         </div>
-        <div className=' flex gap-4'>
-          <div className='hidden md:block'>
-            <button className='btn btn-primary'>Create an account</button>
+
+        {user ? (
+          <div>
+            <div className='dropdown dropdown-end'>
+              <div tabIndex={0} role='button' className='btn btn-ghost flex items-center gap-2'>
+                <div className='avatar'>
+                  <div className='w-10 rounded-full'>
+                    <img
+                      alt='avatar'
+                      src='https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg'
+                    />
+                  </div>
+                </div>
+
+                <h3 className='text-sm font-semibold'>Sery Vathana</h3>
+              </div>
+
+              <ul
+                tabIndex={0}
+                className='dropdown-content z-[1] menu p-2 shadow-lg border bg-base-100 rounded-xl w-52'
+              >
+                <li>
+                  <a>Profile</a>
+                </li>
+                <li>
+                  <a>Create Post</a>
+                </li>
+                <div className='divider my-0'></div>
+                <li>
+                  <a>Sign out</a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <button className='btn btn-outline'>Sign In</button>
-        </div>
+        ) : (
+          <div className=' flex gap-4'>
+            <div className='hidden md:block'>
+              <button className='btn btn-primary'>Create an account</button>
+            </div>
+            <button className='btn btn-outline'>Sign In</button>
+          </div>
+        )}
       </div>
     </div>
   );
