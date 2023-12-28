@@ -1,3 +1,4 @@
+import Footer from '../components/Footer';
 import Nav from '../components/Nav';
 
 function MainLayout({ children }) {
@@ -5,6 +6,7 @@ function MainLayout({ children }) {
     <div>
       <Nav />
       {children}
+      <Footer />
     </div>
   );
 }

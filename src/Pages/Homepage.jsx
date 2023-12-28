@@ -11,12 +11,10 @@ function Homepage() {
         <div className='max-w-screen-2xl mx-auto px-2 flex flex-col justify-center items-center py-20'>
           {/* HERO SECTION */}
           <section className='flex flex-col items-center'>
-            <h1 className=' text-4xl md:text-5xl font-semibold text-center max-w-[700px] leading-tight'>
-              FIND YOUR DREAM HOME
-            </h1>
+            <h1 className=' text-4xl md:text-5xl font-semibold text-center max-w-[700px] leading-tight'>FIND YOUR DREAM HOME</h1>
             <p className='text-center text-sm md:text-xl text-gray-500 max-w-[700px] mt-5'>
-              If you're looking for a place where you can be yourself, don't give up. Keep searching
-              until you find a place that feels like home
+              If you're looking for a place where you can be yourself, don't give up. Keep searching until you find a place that
+              feels like home
             </p>
 
             <div className='flex gap-10 mt-10'>
@@ -46,7 +44,8 @@ function Homepage() {
                 <MoveRight className='mt-0.5' />
               </a>
             </div>
-            <div className='mt-5 grid grid-cols-4 gap-5'>
+            <div className='mt-5 grid grid-cols-5 gap-5'>
+              <ItemCard />
               <ItemCard />
               <ItemCard />
               <ItemCard />
@@ -54,14 +53,6 @@ function Homepage() {
             </div>
           </section>
         </div>
-        {/* FOOTER SECTION */}
-        <div className='divider my-0'></div>
-        <footer className='my-10'>
-          <div className='max-w-screen-2xl mx-auto px-2 flex justify-between'>
-            <p>Copyright - 2023</p>
-            <p>Nary, Lin, Kongkea</p>
-          </div>
-        </footer>
       </div>
     </MainLayout>
   );
