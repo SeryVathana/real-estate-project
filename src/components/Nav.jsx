@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 function Nav() {
-  const user = true;
+  const user = false;
 
   return (
     <div className='max-w-screen border-b border-gray-300'>
@@ -10,25 +10,11 @@ function Nav() {
           <div className='lg:hidden'>
             <div className='dropdown'>
               <div tabIndex={0} role='button' className='btn btn-ghost'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  className='h-5 w-5'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  stroke='currentColor'
-                >
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    strokeWidth='2'
-                    d='M4 6h16M4 12h8m-8 6h16'
-                  />
+                <svg xmlns='http://www.w3.org/2000/svg' className='h-5 w-5' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+                  <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M4 6h16M4 12h8m-8 6h16' />
                 </svg>
               </div>
-              <ul
-                tabIndex={0}
-                className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52'
-              >
+              <ul tabIndex={0} className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52'>
                 <li>
                   <a>Browse</a>
                 </li>
@@ -86,20 +72,14 @@ function Nav() {
               <div tabIndex={0} role='button' className='btn btn-ghost flex items-center gap-2'>
                 <div className='avatar'>
                   <div className='w-10 rounded-full'>
-                    <img
-                      alt='avatar'
-                      src='https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg'
-                    />
+                    <img alt='avatar' src='https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg' />
                   </div>
                 </div>
 
-                <h3 className='text-sm font-semibold'>Sery Vathana</h3>
+                <h3 className='hidden sm:inline-block text-sm font-semibold'>Sery Vathana</h3>
               </div>
 
-              <ul
-                tabIndex={0}
-                className='dropdown-content z-[1] menu p-2 shadow-lg border bg-base-100 rounded-xl w-52'
-              >
+              <ul tabIndex={0} className='dropdown-content z-[1] menu p-2 shadow-lg border bg-base-100 rounded-xl w-52'>
                 <li>
                   <a>Profile</a>
                 </li>
@@ -116,9 +96,13 @@ function Nav() {
         ) : (
           <div className=' flex gap-4'>
             <div className='hidden md:block'>
-              <button className='btn btn-primary'>Create an account</button>
+              <Link to={'/sign-up'} className='btn btn-primary'>
+                Create an account
+              </Link>
             </div>
-            <button className='btn btn-outline'>Sign In</button>
+            <Link to={'/sign-in'} className='btn btn-outline'>
+              Sign In
+            </Link>
           </div>
         )}
       </div>

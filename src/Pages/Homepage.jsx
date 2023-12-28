@@ -17,7 +17,7 @@ function Homepage() {
               feels like home
             </p>
 
-            <div className='flex gap-10 mt-10'>
+            <div className='grid sm:flex gap-10 mt-10'>
               {user ? (
                 <a href='/profile' className='btn btn-primary'>
                   My Profile
@@ -38,13 +38,13 @@ function Homepage() {
           {/* CARD CONTAINER SECTION */}
           <section className='w-full mt-32'>
             <div className='w-full flex items-center justify-between'>
-              <h1 className='text-3xl font-semibold'>Top pick for you</h1>
+              <h1 className='text-xl sm:text-3xl font-semibold'>Top pick for you</h1>
               <a href='/browse' className='btn btn-link'>
                 See more
                 <MoveRight className='mt-0.5' />
               </a>
             </div>
-            <div className='mt-5 grid grid-cols-5 gap-5'>
+            <div className='mt-5 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-5 lg:gap-7'>
               <ItemCard />
               <ItemCard />
               <ItemCard />
