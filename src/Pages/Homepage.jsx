@@ -2,6 +2,8 @@ import { MoveRight } from 'lucide-react';
 import MainLayout from '../Layouts/MainLayout';
 import ItemCard from '../components/ItemCard';
 
+import { mockData as data } from '../data/mock-data';
+
 function Homepage() {
   const user = true;
 
@@ -45,11 +47,9 @@ function Homepage() {
               </a>
             </div>
             <div className='mt-5 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-5 lg:gap-7'>
-              <ItemCard />
-              <ItemCard />
-              <ItemCard />
-              <ItemCard />
-              <ItemCard />
+              {data.slice(0, 5).map((item) => {
+                return <ItemCard key={item.id} item={item} />;
+              })}
             </div>
           </section>
         </div>

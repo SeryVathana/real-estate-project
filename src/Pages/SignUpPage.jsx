@@ -7,7 +7,7 @@ const SignUpPage = () => {
         <h1 className='text-4xl font-semibold'>Sign Up</h1>
 
         <form className='w-full flex flex-col items-center mt-10 gap-5'>
-        <label className='form-control w-full max-w-lg'>
+          <label className='form-control w-full max-w-lg'>
             <div className='label'>
               <span className='label-text text-xl'>Firstname</span>
             </div>
@@ -25,15 +25,8 @@ const SignUpPage = () => {
             </div>
             <input type='email' placeholder='Enter your email' className='input input-bordered w-full max-w-lg' />
           </label>
-          <label className='form-control w-full max-w-lg'>
 
           <label className='form-control w-full max-w-lg'>
-            <div className='label'>
-              <span className='label-text text-xl'>Phone Number</span>
-            </div>
-            <input type='phone' placeholder='Enter your phone number' className='input input-bordered w-full max-w-lg' />
-          </label>
-
             <div className='label'>
               <span className='label-text text-xl'>Password</span>
             </div>
@@ -43,6 +36,13 @@ const SignUpPage = () => {
               placeholder='Enter your password'
               className='input input-bordered w-full max-w-lg'
             />
+          </label>
+
+          <label className='form-control w-full max-w-lg'>
+            <div className='label'>
+              <span className='label-text text-xl'>Phone Number</span>
+            </div>
+            <input type='number' placeholder='Enter your phone number' className='input input-bordered w-full max-w-lg' />
           </label>
 
           <button type='submit' className='btn btn-primary mt-5'>
