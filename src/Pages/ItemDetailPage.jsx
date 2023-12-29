@@ -8,7 +8,7 @@ const ItemDetailPage = () => {
 
   return (
     <MainLayout>
-      <div className='max-w-screen-2xl mx-auto min-h-[80vh] px-2 flex flex-col py-10'>
+      <div className='max-w-screen-xl mx-auto min-h-[80vh] px-2 flex flex-col py-10'>
         <div className='w-full flex justify-between'>
           <div>
             <h1 className='text-3xl'>Boutique Space in Greenville</h1>
