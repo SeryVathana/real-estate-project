@@ -1,3 +1,4 @@
+import { Menu } from 'lucide-react';
 import MainLayout from '../Layouts/MainLayout';
 import ItemCard from '../components/ItemCard';
 import { MoveRight } from 'lucide-react';
