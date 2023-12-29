@@ -25,7 +25,7 @@ const ItemDetailPage = () => {
         <div className='grid grid-cols-12 h-[500px] gap-5 mt-5'>
           <div className=' col-span-6 h-full overflow-hidden'>
             <img
-              src='https://media.onthemarket.com/properties/8592075/1428251558/image-0-480x320.jpg'
+              src='https://assets-news.housing.com/news/wp-content/uploads/2022/02/27121904/featured-compressed-67.jpg'
               alt='ji'
               className='h-full w-full object-cover rounded-xl'
             />

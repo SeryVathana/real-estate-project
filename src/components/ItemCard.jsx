@@ -4,7 +4,7 @@ const ItemCard = () => {
   return (
     <a href='/item' className='card bg-base-100 border rounded-md shadow-sm'>
       <figure>
-        <img src='https://media.onthemarket.com/properties/8592075/1428251558/image-0-480x320.jpg' alt='Shoes' />
+        <img src='https://assets-news.housing.com/news/wp-content/uploads/2022/02/27121904/featured-compressed-67.jpg' alt='home' />
       </figure>
       <div className='p-3 sm:space-y-2'>
         <h1 className='text-md sm:text-xl font-semibold text-primary'>$230,000</h1>
