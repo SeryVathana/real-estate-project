@@ -14,45 +14,54 @@ const BrowsePage = () => {
             <input type='text' placeholder='Enter address, city or ZIP code' className='input input-bordered w-full col-span-3' />
             <select className='select select-bordered w-full max-w-xs'>
               <option disabled selected>
-                Who shot first?
+               for sale
               </option>
-              <option>Han Solo</option>
-              <option>Greedo</option>
+              <option>Vila</option>
+              <option>Hotel</option>
+              <option>cando</option>
+              <option>Apartment</option>
+              <option>House</option>
+              <option>Lan</option>
             </select>
             <select className='select select-bordered w-full max-w-xs'>
               <option disabled selected>
-                Who shot first?
+               min price:$500k
               </option>
-              <option>Han Solo</option>
-              <option>Greedo</option>
+              <option>$230K</option>
+              <option>$250k</option>
+              <option>$280kk</option>
+              <option>$300k</option>
+              <option>$380k</option>
+              <option>$400k</option>
+              <option>$490k</option>
             </select>
             <select className='select select-bordered w-full max-w-xs'>
               <option disabled selected>
-                Who shot first?
+                max price:$700k
               </option>
-              <option>Han Solo</option>
-              <option>Greedo</option>
+              <option>$700k</option>
+              <option>$800k</option>
+              <option>$900k</option>
+              <option>$100k</option>
+              <option>$200k</option>
+              <option>$3000k</option>
             </select>
             <select className='select select-bordered w-full max-w-xs'>
               <option disabled selected>
-                Who shot first?
+                Floor area m^2
               </option>
-              <option>Han Solo</option>
-              <option>Greedo</option>
+              <option> 55m² to 65m²</option>
+              <option>75m² to 100m²</option>
+              <option>185m2</option>
+              <option>150m² </option>
+               <option> 200m²</option>
             </select>
             <select className='select select-bordered w-full max-w-xs'>
               <option disabled selected>
-                Who shot first?
+              more
               </option>
-              <option>Han Solo</option>
-              <option>Greedo</option>
-            </select>
-            <select className='select select-bordered w-full max-w-xs'>
-              <option disabled selected>
-                Who shot first?
-              </option>
-              <option>Han Solo</option>
-              <option>Greedo</option>
+              <option>small house</option>
+              <option>Big house</option>
             </select>
           </div>
         </section>
