@@ -1,10 +1,13 @@
-// import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 import { BedSingle, MapPin, PhoneCall, Star, StarHalf } from 'lucide-react';
 import MainLayout from '../Layouts/MainLayout';
 
+import data from '../data/mock-data.json';
+
 const ItemDetailPage = () => {
-  //   const itemId = useParams();
+  const itemId = useParams();
+  const newData = data.filter((eachData) => eachData.id === Number(itemId.id));
 
   return (
     <MainLayout>

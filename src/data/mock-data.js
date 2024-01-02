@@ -36,7 +36,8 @@ export const mockData = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate consequuntur quidem voluptate voluptas, molestiae odit optio, excepturi porro est, dolorum totam doloremque. Similique quaerat natus eveniet dolore voluptas! Placeat, voluptate perferendis atque, nisi nihil autem laboriosam porro quam vitae aliquid similique magnam numquam itaque minus illo corporis maxime vero fugit',
     price: 4500,
     type: 'rent',
-    displayImage: 'https://3.bp.blogspot.com/-86Ak0IGhCbA/WN-3wq8xGFI/AAAAAAAAAJE/B7IM3xX1MuooPZq9IdsLCuIqe7qKzgeGwCLcB/s1600/6.jpg',
+    displayImage:
+      'https://3.bp.blogspot.com/-86Ak0IGhCbA/WN-3wq8xGFI/AAAAAAAAAJE/B7IM3xX1MuooPZq9IdsLCuIqe7qKzgeGwCLcB/s1600/6.jpg',
     allImages: [''],
     details: {
       location: ['Toul Kork', 'Phnom Penh'],
@@ -66,7 +67,8 @@ export const mockData = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate consequuntur quidem voluptate voluptas, molestiae odit optio, excepturi porro est, dolorum totam doloremque. Similique quaerat natus eveniet dolore voluptas! Placeat, voluptate perferendis atque, nisi nihil autem laboriosam porro quam vitae aliquid similique magnam numquam itaque minus illo corporis maxime vero fugit',
     price: 3400,
     type: 'rent',
-    displayImage: 'https://1.bp.blogspot.com/-h9VZcPSqpuk/WN-3rkpWA8I/AAAAAAAAAIw/asE3C0WkZxYOy2575DYH_pPTzF3IHIrvACLcB/s1600/29.jpg',
+    displayImage:
+      'https://1.bp.blogspot.com/-h9VZcPSqpuk/WN-3rkpWA8I/AAAAAAAAAIw/asE3C0WkZxYOy2575DYH_pPTzF3IHIrvACLcB/s1600/29.jpg',
     allImages: [''],
     details: {
       location: ['Toul Kork', 'Phnom Penh'],
@@ -96,7 +98,8 @@ export const mockData = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate consequuntur quidem voluptate voluptas, molestiae odit optio, excepturi porro est, dolorum totam doloremque. Similique quaerat natus eveniet dolore voluptas! Placeat, voluptate perferendis atque, nisi nihil autem laboriosam porro quam vitae aliquid similique magnam numquam itaque minus illo corporis maxime vero fugit',
     price: 5000,
     type: 'rent',
-    displayImage: 'https://2.bp.blogspot.com/-Q7-2jXFkA2c/WN-3hLSPbEI/AAAAAAAAAIA/GV4N7tQKgqMgvrQN6nKQhSFW5URah2gwgCLcB/s1600/18.jpg',
+    displayImage:
+      'https://2.bp.blogspot.com/-Q7-2jXFkA2c/WN-3hLSPbEI/AAAAAAAAAIA/GV4N7tQKgqMgvrQN6nKQhSFW5URah2gwgCLcB/s1600/18.jpg',
     allImages: [''],
     details: {
       location: ['Toul Kork', 'Phnom Penh'],
@@ -126,7 +129,8 @@ export const mockData = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate consequuntur quidem voluptate voluptas, molestiae odit optio, excepturi porro est, dolorum totam doloremque. Similique quaerat natus eveniet dolore voluptas! Placeat, voluptate perferendis atque, nisi nihil autem laboriosam porro quam vitae aliquid similique magnam numquam itaque minus illo corporis maxime vero fugit',
     price: 4600,
     type: 'rent',
-    displayImage: 'https://1.bp.blogspot.com/-_7OjEYkOD7c/WOAHbnMnSfI/AAAAAAAAAPQ/OefIX3X1aakiFjkh9zHPcKGfpupQ7NyWgCLcB/s1600/94.jpg',
+    displayImage:
+      'https://1.bp.blogspot.com/-_7OjEYkOD7c/WOAHbnMnSfI/AAAAAAAAAPQ/OefIX3X1aakiFjkh9zHPcKGfpupQ7NyWgCLcB/s1600/94.jpg',
     allImages: [''],
     details: {
       location: ['Toul Kork', 'Phnom Penh'],
@@ -186,7 +190,8 @@ export const mockData = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate consequuntur quidem voluptate voluptas, molestiae odit optio, excepturi porro est, dolorum totam doloremque. Similique quaerat natus eveniet dolore voluptas! Placeat, voluptate perferendis atque, nisi nihil autem laboriosam porro quam vitae aliquid similique magnam numquam itaque minus illo corporis maxime vero fugit',
     price: 3000,
     type: 'rent',
-    displayImage: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/134475469.jpg?k=986e0385365fa9e17ef6497e2fb7d5e16552358ad343c4ad8fc35b29802eacac&o=&hp=1',
+    displayImage:
+      'https://cf.bstatic.com/xdata/images/hotel/max1024x768/134475469.jpg?k=986e0385365fa9e17ef6497e2fb7d5e16552358ad343c4ad8fc35b29802eacac&o=&hp=1',
     allImages: [''],
     details: {
       location: ['Toul Kork', 'Phnom Penh'],
@@ -216,7 +221,8 @@ export const mockData = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate consequuntur quidem voluptate voluptas, molestiae odit optio, excepturi porro est, dolorum totam doloremque. Similique quaerat natus eveniet dolore voluptas! Placeat, voluptate perferendis atque, nisi nihil autem laboriosam porro quam vitae aliquid similique magnam numquam itaque minus illo corporis maxime vero fugit',
     price: 7000,
     type: 'rent',
-    displayImage: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/412234542.jpg?k=0eeb9429ff1eb96503723260bfb93218f7024d95d233bab4ed6107c9356975c8&o=&hp=1',
+    displayImage:
+      'https://cf.bstatic.com/xdata/images/hotel/max1024x768/412234542.jpg?k=0eeb9429ff1eb96503723260bfb93218f7024d95d233bab4ed6107c9356975c8&o=&hp=1',
     allImages: [''],
     details: {
       location: ['Toul Kork', 'Phnom Penh'],

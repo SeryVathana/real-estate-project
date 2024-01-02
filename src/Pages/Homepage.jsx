@@ -2,9 +2,13 @@ import { MoveRight } from 'lucide-react';
 import MainLayout from '../Layouts/MainLayout';
 import ItemCard from '../components/ItemCard';
 
-import { mockData as data } from '../data/mock-data';
+// import { mockData as data } from '../data/mock-data';
+
+import mockData from '../data/mock-data.json';
 
 function Homepage() {
+  const data = mockData;
+
   const user = true;
 
   return (
@@ -41,15 +45,10 @@ function Homepage() {
           <section className='w-full mt-32'>
             <div className='w-full flex items-center justify-between'>
               <h1 className='text-xl sm:text-3xl font-semibold'>Top pick for you</h1>
-              <select className='select select-bordered w-50 max-w-xs'>
-              <option disabled selected>
-               Sort By
-              </option>
-              <option>villa</option>
-              <option>House</option>
-             
-            </select>
-             
+              <a href='/browse' className='btn btn-link'>
+                See more
+                <MoveRight className='mt-0.5' />
+              </a>
             </div>
             <div className='mt-5 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-5 lg:gap-7'>
               {data.slice(0, 5).map((item) => {
