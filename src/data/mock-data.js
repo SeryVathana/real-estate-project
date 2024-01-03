@@ -13,6 +13,7 @@ export const mockData = [
       size: 30,
       bed: 2,
       bath: 2,
+      
     },
     contactPerson: {
       profileImg: 'https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg',

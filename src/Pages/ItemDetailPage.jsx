@@ -125,12 +125,12 @@ const ItemDetailPage = () => {
               </div>
 
               <div className='space-y-2'>
-                <h3 className='text-xl font-semibold'>Sery Vathana</h3>
+                <h3 className='text-xl font-semibold'>Seung sovannary</h3>
                 <p className='flex gap-3'>
                   <span>
                     <PhoneCall className='w-5' />
                   </span>
-                  <span>0232398324</span>
+                  <span>0974874231</span>
                 </p>
               </div>
             </div>
@@ -212,7 +212,7 @@ const ItemDetailPage = () => {
             <div className='mt-5'>
               <div className='border p-2 rounded-md bg-gray-50 flex flex-col'>
                 <div className='flex items-center gap-5'>
-                  <h1 className='text-lg font-semibold'>Sery Vathana</h1>
+                  <h1 className='text-lg font-semibold'>seung sovannary</h1>
                   <div className='flex gap-2'>
                     <Star className='w-5 text-yellow-500' />
                     <Star className='w-5 text-yellow-500' />
