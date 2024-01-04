@@ -1,8 +1,9 @@
 import { Bath, BedSingle, MapPin, Ruler } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ItemCard = ({ item }) => {
   return (
-    <a href={`/item/${item.id}`} className='card bg-base-100 border rounded-md shadow-sm'>
+    <Link to={`/item/${item.id}`} className='card bg-base-100 border rounded-md shadow-sm'>
       <figure className='h-1/2'>
         <img src={item.displayImage} alt='home' className='h-full w-full object-cover' />
       </figure>
@@ -34,7 +35,7 @@ const ItemCard = ({ item }) => {
           </div>
         </div>
       </div>
-    </a>
+    </Link>
   );
 };
 
