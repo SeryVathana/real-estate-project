@@ -6,7 +6,9 @@
     "price": 5000,
     "type": "rent",
     "displayImage": "https://assets-news.housing.com/news/wp-content/uploads/2022/02/27121904/featured-compressed-67.jpg",
-    "allImages": [""],
+    "allImages": ["https://cf.bstatic.com/xdata/images/hotel/max1024x768/21698667.jpg?k=f5e1d9bbdd55eaa13384d42ce14aed81cd75b1b4abd34c0a38a33042783808ef&o=&hp=1",
+    "https://cf.bstatic.com/xdata/images/hotel/max1024x768/13812155.jpg?k=c5c134e28c27d48ead472aa6ece7a45ffa060403ff361496bfc20637f7738219&o=&hp=1",
+    "https://cf.bstatic.com/xdata/images/hotel/max1024x768/21673088.jpg?k=c3abacd3e6824a66d55b199c3b9cc05b8d24bad2bb405665cca76dba5a4e4578&o=&hp=1"],
     "details": {
       "location": ["Toul Kork", "Phnom Penh"],
       "size": 30,
@@ -168,7 +170,9 @@
     "price": 3000,
     "type": "booking",
     "displayImage": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/134475469.jpg?k=986e0385365fa9e17ef6497e2fb7d5e16552358ad343c4ad8fc35b29802eacac&o=&hp=1",
-    "allImages": [""],
+    "allImages": ["https://cf.bstatic.com/xdata/images/hotel/max1024x768/160610358.jpg?k=4607cb699461a3ba00d67ab601f743170a28a717f78d372873353bdad4eb2fbc&o=&hp=1",
+    "https://cf.bstatic.com/xdata/images/hotel/max1024x768/135094938.jpg?k=44a39ade92d3906f8ebc875d49a81b52fc1cb1b42d7b72885d7263c1f86c2512&o=&hp=1",
+    "https://cf.bstatic.com/xdata/images/hotel/max1024x768/160610389.jpg?k=8367d9d238f7fd18e2306efe088786059f125abe043973fcfc8121f1a0b89248&o=&hp=1"],
     "details": {
       "location": ["Toul Kork", "Phnom Penh"],
       "size": 30,
