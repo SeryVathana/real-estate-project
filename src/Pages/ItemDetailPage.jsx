@@ -2,14 +2,24 @@ import { useParams } from 'react-router-dom';
 
 import { BedSingle, MapPin, PhoneCall, Star, StarHalf } from 'lucide-react';
 import MainLayout from '../Layouts/MainLayout';
+import { useEffect, useState } from 'react';
 
 import data from '../data/mock-data.json';
 
 const ItemDetailPage = () => {
   const itemId = useParams();
-  const newData = data.filter((eachData) => eachData.id === Number(itemId.id))[0];
+  const mockData = data.filter((eachData) => eachData.id === Number(itemId.id))[0];
 
-  console.log(newData);
+  const [newData, setNewData] = useState();
+
+  useEffect(() => {
+    fetch(`https://coding-fairy.com/api/mock-api-resources/real-estate/allposts/${itemId.id}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setNewData(data);
+        console.log(data);
+      });
+  }, []);
 
   return (
     <MainLayout>
@@ -17,51 +27,43 @@ const ItemDetailPage = () => {
         {/* TITLE */}
         <div className='w-full flex justify-between'>
           <div>
-            <h1 className='text-3xl'>{newData.itemName}</h1>
+            <h1 className='text-3xl'>{newData?.itemName}</h1>
             <div className='flex items-center gap-2 mt-1 text-gray-500'>
               <MapPin className='w-5 h-5' />
-              <p className='text-md'>{newData.details.location.join(', ')}</p>
+              <p className='text-md'>{newData?.details?.location.join(', ')}</p>
             </div>
           </div>
           <div>
-            <h1 className='text-3xl'>${newData.price.toLocaleString()}</h1>
+            <h1 className='text-3xl'>${newData?.price?.toLocaleString()}</h1>
           </div>
         </div>
 
         {/* IMAGES */}
         <div className='grid grid-cols-12 h-[500px] gap-5 mt-5'>
           <div className='col-span-6 h-full overflow-hidden'>
-            <img src={newData.displayImage} alt='ji' className='h-full w-full object-cover rounded-xl'/>
+            <img src={newData?.displayImage} alt='ji' className='h-full w-full object-cover rounded-xl' />
           </div>
 
           <div className='col-span-3'>
-          <img src={newData.allImages} 
-            alt='ji' 
-            className='h-full w-full object-cover rounded-xl'/> </div>
-          
+            <img src={newData?.allImages[0]} alt='ji' className='h-full w-full object-cover rounded-xl' />{' '}
+          </div>
+
           <div className='col-span-3 flex flex-col gap-5'>
             <div className='h-full relative rounded-xl overflow-hidden'>
-            <img src={newData.allImages} alt='jbjfvncdbgdhgbdi' className='h-full w-full object-cover rounded-xl'/>
-              <img src='' alt='ji'
-                className='h-full w-full object-cover rounded-xl'
-              />
+              <img src={newData?.allImages[1]} alt='jbjfvncdbgdhgbdi' className='h-full w-full object-cover rounded-xl' />
+              <img src='' alt='ji' className='h-full w-full object-cover rounded-xl' />
             </div>
-            
+
             <div className='h-1/2 relative  rounded-xl overflow-hidden'>
-            <img src={newData.allImages} alt='ji' className='h-full w-full object-cover rounded-xl'/>
-              <img
-                src=''
-                alt='ji'
-                className='h-full w-full object-cover'
-              />
-                        
+              <img src={newData?.allImages[2]} alt='ji' className='h-full w-full object-cover rounded-xl' />
+              <img src='' alt='ji' className='h-full w-full object-cover' />
+
               <div className=' absolute inset-0 bg-black bg-opacity-70 flex justify-center items-center'>
                 <p className='text-xl text-white'>View More</p>
               </div>
             </div>
           </div>
         </div>
-      
 
         {/* Info section */}
         <div className='grid grid-cols-12 mt-10 gap-5'>
@@ -105,10 +107,12 @@ const ItemDetailPage = () => {
             <div>
               <h3 className='text-xl font-semibold'>Description</h3>
               <p className='mt-5 text-lg text-gray-500'>
-                Thia is a charming 3-story Tudor eith old-world elegance and beautiful views of Beaver lake is sure to please.with 1800 square
-                feet of airy elegeance natural wood floors througthout,and a modern gourment kitchen,this 4-bedroom,3-bathroom home offersa 2 Car garage.
-                consider curling up in frond of a warm fireplace with a nice book.drift of to sleep to the gentle sounds of the natural lake and foreat every night,then wake up to the stunning sunrise
-                over the lake .All of this conveniently located in a friendly community with excellent schools, about twenty minutes form beaver city.
+                Thia is a charming 3-story Tudor eith old-world elegance and beautiful views of Beaver lake is sure to please.with
+                1800 square feet of airy elegeance natural wood floors througthout,and a modern gourment kitchen,this
+                4-bedroom,3-bathroom home offersa 2 Car garage. consider curling up in frond of a warm fireplace with a nice
+                book.drift of to sleep to the gentle sounds of the natural lake and foreat every night,then wake up to the
+                stunning sunrise over the lake .All of this conveniently located in a friendly community with excellent schools,
+                about twenty minutes form beaver city.
               </p>
             </div>
           </div>

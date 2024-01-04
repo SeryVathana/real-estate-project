@@ -1,14 +1,23 @@
 import MainLayout from '../Layouts/MainLayout';
 import ItemCard from '../components/ItemCard';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import mockData from '../data/mock-data.json';
 
 const BrowsePage = () => {
   const [searchValue, setSearchValue] = useState('');
 
-  const [data, setData] = useState(mockData);
-  const [backUp, setBackUpData] = useState(mockData);
+  const [data, setData] = useState([]);
+  const [backUp, setBackUpData] = useState([]);
+
+  useEffect(() => {
+    fetch('https://coding-fairy.com/api/mock-api-resources/real-estate/allposts')
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data);
+        setBackUpData(data);
+      });
+  }, []);
 
   const handleChangeType = (e) => {
     const inputType = e.target.value;
@@ -24,7 +33,7 @@ const BrowsePage = () => {
     const inputMinPrice = e.target.value;
     console.log(inputMinPrice);
 
-    setData(backUp.filter((eachData) => eachData.price <= inputMinPrice));
+    setData(backUp.filter((eachData) => eachData.price >= inputMinPrice));
   };
 
   const handleSearch = (e) => {

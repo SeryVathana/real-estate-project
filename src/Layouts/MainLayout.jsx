@@ -10,7 +10,6 @@ function MainLayout({ children }) {
   useEffect(() => {
     supabase.auth.onAuthStateChange((e, s) => {
       if (s) {
-        console.log(s);
         dispatch(logIn({ userName: 'Seung Sovannary', userId: s.user.id, userEmail: s.user.email }));
       }
     });

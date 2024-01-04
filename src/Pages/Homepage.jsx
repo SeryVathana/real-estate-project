@@ -5,11 +5,20 @@ import ItemCard from '../components/ItemCard';
 // import { mockData as data } from '../data/mock-data';
 
 import mockData from '../data/mock-data.json';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Homepage() {
-  const data = mockData;
-
   const user = true;
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch('https://coding-fairy.com/api/mock-api-resources/real-estate/allposts')
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data);
+      });
+  }, []);
 
   return (
     <MainLayout>
@@ -25,19 +34,19 @@ function Homepage() {
 
             <div className='grid sm:flex gap-10 mt-10'>
               {user ? (
-                <a href='/profile' className='btn btn-primary'>
+                <Link to='/' className='btn btn-primary'>
                   My Profile
-                </a>
+                </Link>
               ) : (
-                <a href='/sign-up' className='btn btn-primary'>
+                <Link to='/sign-up' className='btn btn-primary'>
                   Join Us
-                </a>
+                </Link>
               )}
 
-              <a href='/' className='btn btn-ghost'>
+              <Link to='/browse' className='btn btn-ghost'>
                 <span>Browse more</span>
                 <MoveRight className='mt-0.5' />
-              </a>
+              </Link>
             </div>
           </section>
 
@@ -45,10 +54,10 @@ function Homepage() {
           <section className='w-full mt-32'>
             <div className='w-full flex items-center justify-between'>
               <h1 className='text-xl sm:text-3xl font-semibold'>Top pick for you</h1>
-              <a href='/browse' className='btn btn-link'>
+              <Link to='/browse' className='btn btn-link'>
                 See more
                 <MoveRight className='mt-0.5' />
-              </a>
+              </Link>
             </div>
             <div className='mt-5 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-5 lg:gap-7'>
               {data.slice(0, 5).map((item) => {
