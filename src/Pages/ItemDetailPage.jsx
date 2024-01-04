@@ -7,7 +7,9 @@ import data from '../data/mock-data.json';
 
 const ItemDetailPage = () => {
   const itemId = useParams();
-  const newData = data.filter((eachData) => eachData.id === Number(itemId.id));
+  const newData = data.filter((eachData) => eachData.id === Number(itemId.id))[0];
+
+  console.log(newData);
 
   return (
     <MainLayout>
@@ -15,25 +17,21 @@ const ItemDetailPage = () => {
         {/* TITLE */}
         <div className='w-full flex justify-between'>
           <div>
-            <h1 className='text-3xl'>Boutique Space in Greenville</h1>
+            <h1 className='text-3xl'>{newData.itemName}</h1>
             <div className='flex items-center gap-2 mt-1 text-gray-500'>
               <MapPin className='w-5 h-5' />
-              <p className='text-md'>Toul Kork, Phnom Penh</p>
+              <p className='text-md'>{newData.details.location.join(', ')}</p>
             </div>
           </div>
           <div>
-            <h1 className='text-3xl'>$14,500</h1>
+            <h1 className='text-3xl'>${newData.price.toLocaleString()}</h1>
           </div>
         </div>
 
         {/* IMAGES */}
         <div className='grid grid-cols-12 h-[500px] gap-5 mt-5'>
           <div className=' col-span-6 h-full overflow-hidden'>
-            <img
-              src='https://assets-news.housing.com/news/wp-content/uploads/2022/02/27121904/featured-compressed-67.jpg'
-              alt='ji'
-              className='h-full w-full object-cover rounded-xl'
-            />
+            <img src={newData.displayImage} alt='ji' className='h-full w-full object-cover rounded-xl' />
           </div>
           <div className=' col-span-3'>
             <img

@@ -16,11 +16,9 @@ const BrowsePage = () => {
     if (inputType === 'none') {
       setData(backUp);
     } else {
-      setData(backUp.filter((eachData) => eachData.type === inputType))
-    
+      setData(backUp.filter((eachData) => eachData.type === inputType));
     }
   };
-  
 
   const handleChangeMinPrice = (e) => {
     const inputMinPrice = e.target.value;
@@ -33,24 +31,19 @@ const BrowsePage = () => {
     setSearchValue(e.target.value);
 
     setData(backUp.filter((item) => String(item.itemName).toLowerCase().includes(String(e.target.value).toLowerCase())));
-
   };
   const handleChangeMaxPrice = (e) => {
     const inputMaxPrice = e.target.value;
-    console.log (inputMaxPrice);
+    console.log(inputMaxPrice);
 
-    setData(backUp.filter((eachData) =>eachData.price <= inputMaxPrice));
+    setData(backUp.filter((eachData) => eachData.price <= inputMaxPrice));
   };
 
   const keySearch = (e) => {
     setSearchValue(e.target.value);
 
     setData(backUp.filter((item) => String(item.itemName).toLowerCase().includes(String(e.target.value).toLowerCase())));
-
   };
-  
-  
-  
 
   return (
     <MainLayout>
@@ -100,11 +93,11 @@ const BrowsePage = () => {
               <option value={20000}>$20000</option>
               <option value={30000}>$30000</option>
             </select>
-            <select className='select select-bordered w-full max-w-xs'
+            <select
+              className='select select-bordered w-full max-w-xs'
               defaultValue={'type'}
               onChange={(e) => handleChangeType(e)}
-              >
-            
+            >
               <option disabled selected>
                 more
               </option>

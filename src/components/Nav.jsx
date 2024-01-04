@@ -1,7 +1,27 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { logOut } from '../redux/slices/authSlice';
+import { supabase } from '..';
 
 function Nav() {
-  const user = false;
+  const user = useSelector((state) => state.auth.value);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const isLoggedIn = user.isLoggedIn;
+
+  const handleLogOut = async (e) => {
+    e.preventDefault();
+
+    const { error } = await supabase.auth.signOut();
+
+    if (error) {
+      console.log(error);
+    }
+
+    dispatch(logOut());
+    navigate('/sign-in');
+  };
 
   return (
     <div className='max-w-screen border-b border-gray-300'>
@@ -66,7 +86,7 @@ function Nav() {
           </ul>
         </div>
 
-        {user ? (
+        {isLoggedIn ? (
           <div>
             <div className='dropdown dropdown-end'>
               <div tabIndex={0} role='button' className='btn btn-ghost flex items-center gap-2'>
@@ -76,7 +96,7 @@ function Nav() {
                   </div>
                 </div>
 
-                <h3 className='hidden sm:inline-block text-sm font-semibold'>Sery Vathana</h3>
+                <h3 className='hidden sm:inline-block text-sm font-semibold'>{user.userName}</h3>
               </div>
 
               <ul tabIndex={0} className='dropdown-content z-[1] menu p-2 shadow-lg border bg-base-100 rounded-xl w-52'>
@@ -87,7 +107,7 @@ function Nav() {
                   <a>Create Post</a>
                 </li>
                 <div className='divider my-0'></div>
-                <li>
+                <li onClick={(e) => handleLogOut(e)}>
                   <a>Sign out</a>
                 </li>
               </ul>
