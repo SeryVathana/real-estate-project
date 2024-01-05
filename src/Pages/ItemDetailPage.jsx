@@ -216,7 +216,7 @@ const ItemDetailPage = () => {
             <div className='mt-5'>
               <div className='border p-2 rounded-md bg-gray-50 flex flex-col'>
                 <div className='flex items-center gap-5'>
-                  <h1 className='text-lg font-semibold'>seung sovannary</h1>
+                  <h1 className='text-lg font-semibold'>Admin</h1>
                   <div className='flex gap-2'>
                     <Star className='w-5 text-yellow-500' />
                     <Star className='w-5 text-yellow-500' />

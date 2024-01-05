@@ -17,12 +17,12 @@ export const mockData = [
     },
     contactPerson: {
       profileImg: 'https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg',
-      name: 'Sery Vathana',
+      name: 'Seung sovannary',
       phoneNumber: '0232398324',
     },
     customerReviews: [
       {
-        name: 'Sery Vathana',
+        name: 'Seung sovannary',
         message:
           'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quidem nam mollitia natus quae tenetur, quod obcaecati suscipit totam sequi rem ut reprehenderit repellendus quibusdam assumenda ducimus, quis nisi quam!',
         rating: 5,
@@ -48,12 +48,12 @@ export const mockData = [
     },
     contactPerson: {
       profileImg: 'https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg',
-      name: 'Sery Vathana',
+      name: 'Seung sovannary',
       phoneNumber: '0232398324',
     },
     customerReviews: [
       {
-        name: 'Sery Vathana',
+        name: 'Seung sovannary',
         message:
           'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quidem nam mollitia natus quae tenetur, quod obcaecati suscipit totam sequi rem ut reprehenderit repellendus quibusdam assumenda ducimus, quis nisi quam!',
         rating: 5,
@@ -79,12 +79,12 @@ export const mockData = [
     },
     contactPerson: {
       profileImg: 'https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg',
-      name: 'Sery Vathana',
+      name: 'Seung sovannary',
       phoneNumber: '0232398324',
     },
     customerReviews: [
       {
-        name: 'Sery Vathana',
+        name: 'Seung sovannary',
         message:
           'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quidem nam mollitia natus quae tenetur, quod obcaecati suscipit totam sequi rem ut reprehenderit repellendus quibusdam assumenda ducimus, quis nisi quam!',
         rating: 5,
@@ -110,12 +110,12 @@ export const mockData = [
     },
     contactPerson: {
       profileImg: 'https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg',
-      name: 'Sery Vathana',
+      name: 'seung sovannary',
       phoneNumber: '0232398324',
     },
     customerReviews: [
       {
-        name: 'Sery Vathana',
+        name: 'Seung sovannary',
         message:
           'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quidem nam mollitia natus quae tenetur, quod obcaecati suscipit totam sequi rem ut reprehenderit repellendus quibusdam assumenda ducimus, quis nisi quam!',
         rating: 5,
@@ -141,12 +141,12 @@ export const mockData = [
     },
     contactPerson: {
       profileImg: 'https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg',
-      name: 'Sery Vathana',
+      name: 'Seung sovannary',
       phoneNumber: '0232398324',
     },
     customerReviews: [
       {
-        name: 'Sery Vathana',
+        name: 'Seung sovannary',
         message:
           'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quidem nam mollitia natus quae tenetur, quod obcaecati suscipit totam sequi rem ut reprehenderit repellendus quibusdam assumenda ducimus, quis nisi quam!',
         rating: 5,
@@ -171,12 +171,12 @@ export const mockData = [
     },
     contactPerson: {
       profileImg: 'https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg',
-      name: 'Sery Vathana',
+      name: 'Seung sovannary',
       phoneNumber: '0232398324',
     },
     customerReviews: [
       {
-        name: 'Sery Vathana',
+        name: 'Seung sovannary',
         message:
           'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quidem nam mollitia natus quae tenetur, quod obcaecati suscipit totam sequi rem ut reprehenderit repellendus quibusdam assumenda ducimus, quis nisi quam!',
         rating: 5,
@@ -202,12 +202,12 @@ export const mockData = [
     },
     contactPerson: {
       profileImg: 'https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg',
-      name: 'Sery Vathana',
+      name: 'seung sovananry',
       phoneNumber: '0232398324',
     },
     customerReviews: [
       {
-        name: 'Sery Vathana',
+        name: 'Seung sovannary',
         message:
           'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quidem nam mollitia natus quae tenetur, quod obcaecati suscipit totam sequi rem ut reprehenderit repellendus quibusdam assumenda ducimus, quis nisi quam!',
         rating: 5,
@@ -233,12 +233,12 @@ export const mockData = [
     },
     contactPerson: {
       profileImg: 'https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg',
-      name: 'Sery Vathana',
+      name: 'Seung sovannary',
       phoneNumber: '0232398324',
     },
     customerReviews: [
       {
-        name: 'Sery Vathana',
+        name: 'Seung sovannary',
         message:
           'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quidem nam mollitia natus quae tenetur, quod obcaecati suscipit totam sequi rem ut reprehenderit repellendus quibusdam assumenda ducimus, quis nisi quam!',
         rating: 5,
@@ -263,12 +263,12 @@ export const mockData = [
     },
     contactPerson: {
       profileImg: 'https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg',
-      name: 'Sery Vathana',
+      name: 'Seung sovannary',
       phoneNumber: '0232398324',
     },
     customerReviews: [
       {
-        name: 'Sery Vathana',
+        name: 'Seung sovannary',
         message:
           'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quidem nam mollitia natus quae tenetur, quod obcaecati suscipit totam sequi rem ut reprehenderit repellendus quibusdam assumenda ducimus, quis nisi quam!',
         rating: 5,
@@ -293,12 +293,12 @@ export const mockData = [
     },
     contactPerson: {
       profileImg: 'https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg',
-      name: 'Sery Vathana',
+      name: 'Seung sovannary',
       phoneNumber: '0232398324',
     },
     customerReviews: [
       {
-        name: 'Sery Vathana',
+        name: 'Seung sovannary',
         message:
           'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quidem nam mollitia natus quae tenetur, quod obcaecati suscipit totam sequi rem ut reprehenderit repellendus quibusdam assumenda ducimus, quis nisi quam!',
         rating: 5,
@@ -323,12 +323,12 @@ export const mockData = [
     },
     contactPerson: {
       profileImg: 'https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg',
-      name: 'Sery Vathana',
+      name: 'Seung sovannary',
       phoneNumber: '0232398324',
     },
     customerReviews: [
       {
-        name: 'Sery Vathana',
+        name: 'Seung sovannary',
         message:
           'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quidem nam mollitia natus quae tenetur, quod obcaecati suscipit totam sequi rem ut reprehenderit repellendus quibusdam assumenda ducimus, quis nisi quam!',
         rating: 5,
@@ -353,12 +353,12 @@ export const mockData = [
     },
     contactPerson: {
       profileImg: 'https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg',
-      name: 'Sery Vathana',
+      name: 'Seung sovannary',
       phoneNumber: '0232398324',
     },
     customerReviews: [
       {
-        name: 'Sery Vathana',
+        name: 'Seung sovannary',
         message:
           'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quidem nam mollitia natus quae tenetur, quod obcaecati suscipit totam sequi rem ut reprehenderit repellendus quibusdam assumenda ducimus, quis nisi quam!',
         rating: 5,
