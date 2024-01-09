@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import MainLayout from '../Layouts/MainLayout';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import {auth} from '../config/firebaseconfig';
 
 const SignUpPage = () => {
   const [inputFirstName, setInputFirstName] = useState('');
@@ -27,7 +29,10 @@ const SignUpPage = () => {
     };
 
     console.log(signUpDatabaseRequest);
+
+    const newUser = await createUserWithEmailAndPassword(auth,inputEmail,inputPassword)
   };
+
 
   return (
     <MainLayout>
