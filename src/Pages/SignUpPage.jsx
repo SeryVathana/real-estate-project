@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import MainLayout from '../Layouts/MainLayout';
-import { supabase } from '..';
 
 const SignUpPage = () => {
   const [inputFirstName, setInputFirstName] = useState('');
@@ -8,9 +7,15 @@ const SignUpPage = () => {
   const [inputEmail, setInputEmail] = useState('');
   const [inputPassword, setInputPassword] = useState('');
   const [inputPhoneNumber, setInputPhoneNumber] = useState('');
+  const [inputRole, setInputRole] = useState('default');
 
   const handleSignUp = async (e) => {
     e.preventDefault();
+
+    if (inputRole === 'default') {
+      console.log('Please select role');
+      return;
+    }
 
     const signUpDatabaseRequest = {
       firstName: inputFirstName,
@@ -18,28 +23,10 @@ const SignUpPage = () => {
       email: inputEmail,
       phoneNumber: inputPhoneNumber,
       pfURL: 'https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg',
+      role: inputRole,
     };
 
-    const createNewUserRequest = {
-      email: inputEmail,
-      password: inputPassword,
-    };
-
-    const { data, error } = await supabase.auth.signUp({
-      ...createNewUserRequest,
-      options: {
-        data: {
-          displayName: inputFirstName + ' ' + inputLastName,
-          phone: inputPhoneNumber,
-        },
-      },
-    });
-
-    if (data) {
-      console.log(data);
-    } else if (error) {
-      console.log(error);
-    }
+    console.log(signUpDatabaseRequest);
   };
 
   return (
@@ -53,7 +40,7 @@ const SignUpPage = () => {
               <span className='label-text text-xl'>Firstname</span>
             </div>
             <input
-              type='firstname'
+              type='text'
               placeholder='Enter your firstname'
               value={inputFirstName}
               onChange={(e) => setInputFirstName(e.target.value)}
@@ -65,7 +52,7 @@ const SignUpPage = () => {
               <span className='label-text text-xl'>Lastname</span>
             </div>
             <input
-              type='lastname'
+              type='text'
               placeholder='Enter your lastname'
               value={inputLastName}
               onChange={(e) => setInputLastName(e.target.value)}
@@ -110,6 +97,24 @@ const SignUpPage = () => {
               onChange={(e) => setInputPhoneNumber(e.target.value)}
               className='input input-bordered w-full max-w-lg'
             />
+          </label>
+
+          <label className='form-control w-full max-w-lg'>
+            <div className='label'>
+              <span className='label-text text-xl'>Role</span>
+            </div>
+            <select
+              className='select select-bordered w-full max-w-xs'
+              defaultValue={'default'}
+              // value={inputRole}
+              onChange={(e) => setInputRole(e.target.value)}
+            >
+              <option disabled value={'default'}>
+                Please select user role
+              </option>
+              <option value={'buyer'}>Buyer</option>
+              <option value={'seller'}>Seller</option>
+            </select>
           </label>
 
           <button type='submit' className='btn btn-primary mt-5'>

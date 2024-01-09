@@ -6,6 +6,7 @@ const initialState = {
     userName: '',
     userId: '',
     userEmail: '',
+    userRole: 'buyer',
   },
 };
 

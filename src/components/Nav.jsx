@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { logOut } from '../redux/slices/authSlice';
 import { supabase } from '..';
 
-
 function Nav() {
   const user = useSelector((state) => state.auth.value);
   const dispatch = useDispatch();
@@ -23,7 +22,6 @@ function Nav() {
     dispatch(logOut());
     navigate('/sign-in');
   };
-  
 
   return (
     <div className='max-w-screen border-b border-gray-300'>
@@ -42,7 +40,6 @@ function Nav() {
                 </li>
                 <li>
                   <a>Home</a>
-                 
                 </li>
                 <li>
                   <a>About Us</a>
@@ -60,23 +57,13 @@ function Nav() {
         <div className=' hidden lg:flex'>
           <ul className='menu menu-horizontal px-1'>
             <li>
+              <Link to='/'>Home</Link>
+            </li>
+            <li>
               <Link to='/browse'>Browse</Link>
             </li>
             <li>
-              <details>
-                <summary>Home</summary>
-                <ul className='p-2'>
-                  <li>
-                    <Link to={'/'}>Villa</Link>
-                  </li>
-                  <li>
-                    <Link to={'/'}>House</Link>
-                  </li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <Link to={'/'}>About Us</Link>
+              <Link to='/about-us'>About Us</Link>
             </li>
           </ul>
         </div>
@@ -96,11 +83,18 @@ function Nav() {
 
               <ul tabIndex={0} className='dropdown-content z-[1] menu p-2 shadow-lg border bg-base-100 rounded-xl w-52'>
                 <li>
-                <Link to='/profile'>Profile</Link>
+                  <Link to='/profile'>Profile</Link>
                 </li>
-                <li>
-                <Link to='/create-post'>Create Post</Link>
-                </li>
+                {user.userRole === 'admin' ? (
+                  <li>
+                    <Link to='/create-post'>Create Post</Link>
+                  </li>
+                ) : null}
+                {user.userRole === 'seller' ? (
+                  <li>
+                    <Link to='/request-sell'>Request Sell</Link>
+                  </li>
+                ) : null}
                 <div className='divider my-0'></div>
                 <li onClick={(e) => handleLogOut(e)}>
                   <a>Sign out</a>

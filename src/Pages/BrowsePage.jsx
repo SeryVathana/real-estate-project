@@ -1,17 +1,15 @@
 import MainLayout from '../Layouts/MainLayout';
 import ItemCard from '../components/ItemCard';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import mockData from '../data/mock-data.json';
-import { Router } from 'react-router-dom';
-
 
 const BrowsePage = () => {
   const [searchValue, setSearchValue] = useState('');
 
-  const [data, setData] = useState([]);
-  const [backUp, setBackUpData] = useState([]);
-  
+  const [data, setData] = useState(mockData);
+  const [backUp, setBackUpData] = useState(mockData);
+
   const handleChangeType = (e) => {
     const inputType = e.target.value;
 
@@ -41,10 +39,14 @@ const BrowsePage = () => {
     setData(backUp.filter((eachData) => eachData.price <= inputMaxPrice));
   };
 
-  const keySearch = (e) => {
-    setSearchValue(e.target.value);
+  const handleChangeCategory = (e) => {
+    const inputType = e.target.value;
 
-    setData(backUp.filter((item) => String(item.itemName).toLowerCase().includes(String(e.target.value).toLowerCase())));
+    if (inputType === 'none') {
+      setData(backUp);
+    } else {
+      setData(backUp.filter((eachData) => eachData.category === inputType));
+    }
   };
 
   return (
@@ -72,9 +74,13 @@ const BrowsePage = () => {
               <option value='sale'>Sale</option>
               <option value='booking'>Booking</option>
             </select>
-            <select className='select select-bordered w-full max-w-xs' onChange={(e) => handleChangeMinPrice(e)}>
-              <option disabled selected>
-                min price:$500k
+            <select
+              className='select select-bordered w-full max-w-xs'
+              defaultValue={'min'}
+              onChange={(e) => handleChangeMinPrice(e)}
+            >
+              <option disabled value={'min'}>
+                Min price
               </option>
               <option value={1000}>$1000</option>
               <option value={2500}>$2500</option>
@@ -84,9 +90,13 @@ const BrowsePage = () => {
               <option value={4000}>$4000</option>
               <option value={10000}>$10000</option>
             </select>
-            <select className='select select-bordered w-full max-w-xs' onChange={(e) => handleChangeMaxPrice(e)}>
-              <option disabled selected>
-                max price:$700k
+            <select
+              className='select select-bordered w-full max-w-xs'
+              defaultValue={'max'}
+              onChange={(e) => handleChangeMaxPrice(e)}
+            >
+              <option disabled value={'max'}>
+                Max price
               </option>
               <option value={5000}>$5000</option>
               <option value={8000}>$8000</option>
@@ -97,18 +107,19 @@ const BrowsePage = () => {
             </select>
             <select
               className='select select-bordered w-full max-w-xs'
-              defaultValue={'type'}
-              onChange={(e) => handleChangeType(e)}
+              defaultValue={'category'}
+              onChange={(e) => handleChangeCategory(e)}
             >
-              <option disabled selected>
-                more
+              <option value={'category'} disabled>
+                Category
               </option>
-              <option>small house</option>
-              <option>Big house</option>
-              <option>Hotel</option>
-              <option>cando</option>
-              <option>Apartment</option>
-              <option>Land</option>
+              <option value={'none'}>None</option>
+              <option value={'small-house'}>Small house</option>
+              <option value={'big-house'}>Big house</option>
+              <option value={'hotel'}>Hotel</option>
+              <option value={'condo'}>Condo</option>
+              <option value={'apartment'}>Apartment</option>
+              <option value={'land'}>Land</option>
             </select>
           </div>
         </section>

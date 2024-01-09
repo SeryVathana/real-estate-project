@@ -6,10 +6,10 @@
     "price": 5000,
     "type": "rent",
     "displayImage": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/466378675.jpg?k=47439be8a91e422a1dbef4f02630d6c86f1266a815d7bd8f21b2c5ce0492bcc1&o=&hp=1",
-    "allImages": ["https://cf.bstatic.com/xdata/images/hotel/max1280x900/466378722.jpg?k=82cf0b40d9bb9a4c1f9cc60ebe534a75a51f9b97cd339277d47f510cf9b17932&o=&hp=1",
-    "https://cf.bstatic.com/xdata/images/hotel/max1024x768/466378879.jpg?k=6da29b8fee0614eb895bab96aac05efa82fffbf72adc33970d25d8f9068d09c6&o=&hp=1",
-    "https://cf.bstatic.com/xdata/images/hotel/max1024x768/466378729.jpg?k=dd54dba07f9c8c708aa8cbd773b09e77da1fb403dd8381a33bb44218017f206a&o=&hp=1"
-    
+    "allImages": [
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/466378722.jpg?k=82cf0b40d9bb9a4c1f9cc60ebe534a75a51f9b97cd339277d47f510cf9b17932&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/466378879.jpg?k=6da29b8fee0614eb895bab96aac05efa82fffbf72adc33970d25d8f9068d09c6&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/466378729.jpg?k=dd54dba07f9c8c708aa8cbd773b09e77da1fb403dd8381a33bb44218017f206a&o=&hp=1"
     ],
     "details": {
       "location": ["Toul Kork", "Phnom Penh"],
@@ -17,6 +17,7 @@
       "bed": 2,
       "bath": 2
     },
+    "category": "villa",
     "contactPerson": {
       "profileImg": "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg",
       "name": "Seung Sovannary",
@@ -32,7 +33,7 @@
   },
   {
     "id": 2,
-    "itemName": "villa with pool",
+    "itemName": "Apartment",
     "itemDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate consequuntur quidem voluptate voluptas, molestiae odit optio, excepturi porro est, dolorum totam doloremque. Similique quaerat natus eveniet dolore voluptas! Placeat, voluptate perferendis atque, nisi nihil autem laboriosam porro quam vitae aliquid similique magnam numquam itaque minus illo corporis maxime vero fugit",
     "price": 10000,
     "type": "rent",
@@ -45,11 +46,11 @@
     "details": {
       "location": ["Toul Kork", "Phnom Penh"],
 
-
       "size": 30,
       "bed": 2,
       "bath": 2
     },
+    "category": "apartment",
     "contactPerson": {
       "profileImg": "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg",
       "name": "Seung Sovannary",
@@ -65,7 +66,7 @@
   },
   {
     "id": 3,
-    "itemName": "Vila",
+    "itemName": "Hotel",
     "itemDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate consequuntur quidem voluptate voluptas, molestiae odit optio, excepturi porro est, dolorum totam doloremque. Similique quaerat natus eveniet dolore voluptas! Placeat, voluptate perferendis atque, nisi nihil autem laboriosam porro quam vitae aliquid similique magnam numquam itaque minus illo corporis maxime vero fugit",
     "price": 8000,
     "type": "sale",
@@ -81,6 +82,7 @@
       "bed": 2,
       "bath": 2
     },
+    "category": "hotel",
     "contactPerson": {
       "profileImg": "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg",
       "name": "Seung Sovannary",
@@ -112,255 +114,7 @@
       "bed": 2,
       "bath": 2
     },
-    "contactPerson": {
-      "profileImg": "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg",
-      "name": "Seung Sovannary",
-      "phoneNumber": "0232398324"
-    },
-    "customerReviews": [
-      {
-        "name": "Seung Sovannary",
-        "message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quidem nam mollitia natus quae tenetur, quod obcaecati suscipit totam sequi rem ut reprehenderit repellendus quibusdam assumenda ducimus, quis nisi quam!",
-        "rating": 5
-      }
-    ]
-  },
-  {
-    "id": 5,
-    "itemName": "Land",
-    "itemDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate consequuntur quidem voluptate voluptas, molestiae odit optio, excepturi porro est, dolorum totam doloremque. Similique quaerat natus eveniet dolore voluptas! Placeat, voluptate perferendis atque, nisi nihil autem laboriosam porro quam vitae aliquid similique magnam numquam itaque minus illo corporis maxime vero fugit",
-    "price": 4600,
-    "type": "rent",
-    "displayImage": "https://1.bp.blogspot.com/-_7OjEYkOD7c/WOAHbnMnSfI/AAAAAAAAAPQ/OefIX3X1aakiFjkh9zHPcKGfpupQ7NyWgCLcB/s1600/94.jpg",
-    "allImages": [
-      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/21698667.jpg?k=f5e1d9bbdd55eaa13384d42ce14aed81cd75b1b4abd34c0a38a33042783808ef&o=&hp=1",
-   
-      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/13812155.jpg?k=c5c134e28c27d48ead472aa6ece7a45ffa060403ff361496bfc20637f7738219&o=&hp=1",
-      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/21673088.jpg?k=c3abacd3e6824a66d55b199c3b9cc05b8d24bad2bb405665cca76dba5a4e4578&o=&hp=1"
-    ],
-    "details": {
-      "location": ["Toul Kork", "Phnom Penh"],
-      "size": 30,
-      "bed": 2,
-      "bath": 2
-    },
-    "contactPerson": {
-      "profileImg": "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg",
-      "name": "Seung Sovannary",
-      "phoneNumber": "0232398324"
-    },
-    "customerReviews": [
-      {
-        "name": "Seung Sovannary",
-        "message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quidem nam mollitia natus quae tenetur, quod obcaecati suscipit totam sequi rem ut reprehenderit repellendus quibusdam assumenda ducimus, quis nisi quam!",
-        "rating": 5
-      }
-    ]
-  },
-  {
-    "id": 6,
-    "itemName": "Hotle",
-    "itemDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate consequuntur quidem voluptate voluptas, molestiae odit optio, excepturi porro est, dolorum totam doloremque. Similique quaerat natus eveniet dolore voluptas! Placeat, voluptate perferendis atque, nisi nihil autem laboriosam porro quam vitae aliquid similique magnam numquam itaque minus illo corporis maxime vero fugit",
-    "price": 6000,
-    "type": "sale",
-    "displayImage": "https://photos.ips-cambodia.com/photos/2107171332b8a2ab-White-Terrace-01.tab.jpg",
-    "allImages": [
-      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/21698667.jpg?k=f5e1d9bbdd55eaa13384d42ce14aed81cd75b1b4abd34c0a38a33042783808ef&o=&hp=1",
-      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/13812155.jpg?k=c5c134e28c27d48ead472aa6ece7a45ffa060403ff361496bfc20637f7738219&o=&hp=1",
-      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/21673088.jpg?k=c3abacd3e6824a66d55b199c3b9cc05b8d24bad2bb405665cca76dba5a4e4578&o=&hp=1"
-    ],
-    "details": {
-      "location": ["Toul Kork", "Phnom Penh"],
-      "size": 30,
-      "bed": 2,
-      "bath": 2
-    },
-    "contactPerson": {
-      "profileImg": "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg",
-      "name": "Seung Sovannary",
-      "phoneNumber": "0232398324"
-    },
-    "customerReviews": [
-      {
-        "name": "Seung Sovannary",
-        "message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quidem nam mollitia natus quae tenetur, quod obcaecati suscipit totam sequi rem ut reprehenderit repellendus quibusdam assumenda ducimus, quis nisi quam!",
-        "rating": 5
-      }
-    ]
-  },
-  {
-    "id": 7,
-    "itemName": "Vila Vala",
-    "itemDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate consequuntur quidem voluptate voluptas, molestiae odit optio, excepturi porro est, dolorum totam doloremque. Similique quaerat natus eveniet dolore voluptas! Placeat, voluptate perferendis atque, nisi nihil autem laboriosam porro quam vitae aliquid similique magnam numquam itaque minus illo corporis maxime vero fugit",
-    "price": 3000,
-    "type": "booking",
-    "displayImage": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/134475469.jpg?k=986e0385365fa9e17ef6497e2fb7d5e16552358ad343c4ad8fc35b29802eacac&o=&hp=1",
-    "allImages": [
-      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/160610358.jpg?k=4607cb699461a3ba00d67ab601f743170a28a717f78d372873353bdad4eb2fbc&o=&hp=1",
-      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/135094938.jpg?k=44a39ade92d3906f8ebc875d49a81b52fc1cb1b42d7b72885d7263c1f86c2512&o=&hp=1",
-      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/160610389.jpg?k=8367d9d238f7fd18e2306efe088786059f125abe043973fcfc8121f1a0b89248&o=&hp=1"
-    ],
-    "details": {
-      "location": ["Toul Kork", "Phnom Penh"],
-      "size": 30,
-      "bed": 2,
-      "bath": 2
-    },
-    "contactPerson": {
-      "profileImg": "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg",
-      "name": "Seung Sovannary",
-      "phoneNumber": "0232398324"
-    },
-    "customerReviews": [
-      {
-        "name": "Seung Sovannary",
-        "message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quidem nam mollitia natus quae tenetur, quod obcaecati suscipit totam sequi rem ut reprehenderit repellendus quibusdam assumenda ducimus, quis nisi quam!",
-        "rating": 5
-      }
-    ]
-  },
-  {
-    "id": 8,
-    "itemName": "Hotle",
-    "itemDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate consequuntur quidem voluptate voluptas, molestiae odit optio, excepturi porro est, dolorum totam doloremque. Similique quaerat natus eveniet dolore voluptas! Placeat, voluptate perferendis atque, nisi nihil autem laboriosam porro quam vitae aliquid similique magnam numquam itaque minus illo corporis maxime vero fugit",
-    "price": 7000,
-    "type": "booking",
-    "displayImage": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/412234542.jpg?k=0eeb9429ff1eb96503723260bfb93218f7024d95d233bab4ed6107c9356975c8&o=&hp=1",
-    "allImages": [
-      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/21698667.jpg?k=f5e1d9bbdd55eaa13384d42ce14aed81cd75b1b4abd34c0a38a33042783808ef&o=&hp=1",
-      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/13812155.jpg?k=c5c134e28c27d48ead472aa6ece7a45ffa060403ff361496bfc20637f7738219&o=&hp=1",
-      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/21673088.jpg?k=c3abacd3e6824a66d55b199c3b9cc05b8d24bad2bb405665cca76dba5a4e4578&o=&hp=1"
-    ],
-    "details": {
-      "location": ["Toul Kork", "Phnom Penh"],
-      "size": 30,
-      "bed": 2,
-      "bath": 2
-    },
-    "contactPerson": {
-      "profileImg": "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg",
-      "name": "Seung Sovannary",
-      "phoneNumber": "0232398324"
-    },
-    "customerReviews": [
-      {
-        "name": "Seung Sovannary",
-        "message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quidem nam mollitia natus quae tenetur, quod obcaecati suscipit totam sequi rem ut reprehenderit repellendus quibusdam assumenda ducimus, quis nisi quam!",
-        "rating": 5
-      }
-    ]
-  },
-  {
-    "id": 9,
-    "itemName": "cando",
-    "itemDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate consequuntur quidem voluptate voluptas, molestiae odit optio, excepturi porro est, dolorum totam doloremque. Similique quaerat natus eveniet dolore voluptas! Placeat, voluptate perferendis atque, nisi nihil autem laboriosam porro quam vitae aliquid similique magnam numquam itaque minus illo corporis maxime vero fugit",
-    "price": 8000,
-    "type": "sale",
-    "displayImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsYChhAlcbmD2MapfoqQrIaNMjFBSZjExu0A&usqp=CAU",
-    "allImages": [
-      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/21698667.jpg?k=f5e1d9bbdd55eaa13384d42ce14aed81cd75b1b4abd34c0a38a33042783808ef&o=&hp=1",
-      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/13812155.jpg?k=c5c134e28c27d48ead472aa6ece7a45ffa060403ff361496bfc20637f7738219&o=&hp=1",
-      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/21673088.jpg?k=c3abacd3e6824a66d55b199c3b9cc05b8d24bad2bb405665cca76dba5a4e4578&o=&hp=1"
-    ],
-    "details": {
-      "location": ["Toul Kork", "Phnom Penh"],
-      "size": 30,
-      "bed": 2,
-      "bath": 2
-    },
-    "contactPerson": {
-      "profileImg": "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg",
-      "name": "Seung Sovannary",
-      "phoneNumber": "0232398324"
-    },
-    "customerReviews": [
-      {
-        "name": "Seung Sovannary",
-        "message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quidem nam mollitia natus quae tenetur, quod obcaecati suscipit totam sequi rem ut reprehenderit repellendus quibusdam assumenda ducimus, quis nisi quam!",
-        "rating": 5
-      }
-    ]
-  },
-  {
-    "id": 10,
-    "itemName": "Cando",
-    "itemDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate consequuntur quidem voluptate voluptas, molestiae odit optio, excepturi porro est, dolorum totam doloremque. Similique quaerat natus eveniet dolore voluptas! Placeat, voluptate perferendis atque, nisi nihil autem laboriosam porro quam vitae aliquid similique magnam numquam itaque minus illo corporis maxime vero fugit",
-    "price": 8000,
-    "type": "rent",
-    "displayImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP3n9BYY2RwRCAcVXttSjNp07Cky2fla0pcw&usqp=CAU",
-    "allImages": [
-      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/21698667.jpg?k=f5e1d9bbdd55eaa13384d42ce14aed81cd75b1b4abd34c0a38a33042783808ef&o=&hp=1",
-      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/13812155.jpg?k=c5c134e28c27d48ead472aa6ece7a45ffa060403ff361496bfc20637f7738219&o=&hp=1",
-      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/21673088.jpg?k=c3abacd3e6824a66d55b199c3b9cc05b8d24bad2bb405665cca76dba5a4e4578&o=&hp=1"
-    ],
-    "details": {
-      "location": ["Toul Kork", "Phnom Penh"],
-      "size": 30,
-      "bed": 2,
-      "bath": 2
-    },
-    "contactPerson": {
-      "profileImg": "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg",
-      "name": "Seung Sovannary",
-      "phoneNumber": "0232398324"
-    },
-    "customerReviews": [
-      {
-        "name": "Seung Sovannary",
-        "message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quidem nam mollitia natus quae tenetur, quod obcaecati suscipit totam sequi rem ut reprehenderit repellendus quibusdam assumenda ducimus, quis nisi quam!",
-        "rating": 5
-      }
-    ]
-  },
-  {
-    "id": 11,
-    "itemName": "House",
-    "itemDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate consequuntur quidem voluptate voluptas, molestiae odit optio, excepturi porro est, dolorum totam doloremque. Similique quaerat natus eveniet dolore voluptas! Placeat, voluptate perferendis atque, nisi nihil autem laboriosam porro quam vitae aliquid similique magnam numquam itaque minus illo corporis maxime vero fugit",
-    "price": 10000,
-    "type": "rent",
-    "displayImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIC2VZnE0g4j19IXGG4ivqXnRaBzYWdF4DNQ&usqp=CAU",
-    "allImages": [
-      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/21698667.jpg?k=f5e1d9bbdd55eaa13384d42ce14aed81cd75b1b4abd34c0a38a33042783808ef&o=&hp=1",
-      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/13812155.jpg?k=c5c134e28c27d48ead472aa6ece7a45ffa060403ff361496bfc20637f7738219&o=&hp=1",
-      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/21673088.jpg?k=c3abacd3e6824a66d55b199c3b9cc05b8d24bad2bb405665cca76dba5a4e4578&o=&hp=1"
-    ],
-    "details": {
-      "location": ["Toul Kork", "Phnom Penh"],
-      "size": 30,
-      "bed": 2,
-      "bath": 2
-    },
-    "contactPerson": {
-      "profileImg": "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg",
-      "name": "Seung Sovannary",
-      "phoneNumber": "0232398324"
-    },
-    "customerReviews": [
-      {
-        "name": "Seung Sovannary",
-        "message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quidem nam mollitia natus quae tenetur, quod obcaecati suscipit totam sequi rem ut reprehenderit repellendus quibusdam assumenda ducimus, quis nisi quam!",
-        "rating": 5
-      }
-    ]
-  },
-  {
-    "id": 12,
-    "itemName": "House",
-    "itemDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate consequuntur quidem voluptate voluptas, molestiae odit optio, excepturi porro est, dolorum totam doloremque. Similique quaerat natus eveniet dolore voluptas! Placeat, voluptate perferendis atque, nisi nihil autem laboriosam porro quam vitae aliquid similique magnam numquam itaque minus illo corporis maxime vero fugit",
-    "price": 20000,
-    "type": "sale",
-    "displayImage": "https://i.pinimg.com/originals/c7/a2/ff/c7a2ffe102cafee75f625b7e86734318.jpg",
-    "allImages": [
-      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/21698667.jpg?k=f5e1d9bbdd55eaa13384d42ce14aed81cd75b1b4abd34c0a38a33042783808ef&o=&hp=1",
-      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/13812155.jpg?k=c5c134e28c27d48ead472aa6ece7a45ffa060403ff361496bfc20637f7738219&o=&hp=1",
-      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/21673088.jpg?k=c3abacd3e6824a66d55b199c3b9cc05b8d24bad2bb405665cca76dba5a4e4578&o=&hp=1"
-    ],
-    "details": {
-      "location": ["Toul Kork", "Phnom Penh"],
-      "size": 30,
-      "bed": 2,
-      "bath": 2
-    },
+    "category": "land",
     "contactPerson": {
       "profileImg": "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg",
       "name": "Seung Sovannary",

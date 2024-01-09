@@ -1,8 +1,8 @@
 import { useParams } from 'react-router-dom';
 
 import { BedSingle, MapPin, PhoneCall, Star, StarHalf } from 'lucide-react';
+import { useState } from 'react';
 import MainLayout from '../Layouts/MainLayout';
-import { useEffect, useState } from 'react';
 
 import data from '../data/mock-data.json';
 
@@ -10,7 +10,7 @@ const ItemDetailPage = () => {
   const itemId = useParams();
   const mockData = data.filter((eachData) => eachData.id === Number(itemId.id))[0];
 
-  const [newData, setNewData] = useState();
+  const [newData, setNewData] = useState(mockData);
   return (
     <MainLayout>
       <div className='max-w-screen-xl mx-auto min-h-[80vh] px-2 flex flex-col py-10'>

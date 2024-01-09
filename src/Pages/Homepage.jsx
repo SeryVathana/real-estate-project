@@ -1,14 +1,17 @@
-import { HandIcon, MoveRight } from 'lucide-react';
+import { MoveRight } from 'lucide-react';
+import { useSelector } from 'react-redux';
 import MainLayout from '../Layouts/MainLayout';
 import ItemCard from '../components/ItemCard';
-import { mockData as data } from '../data/mock-data';
 
-import mockData from '../data/mock-data.json';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import mockData from '../data/mock-data.json';
 function Homepage() {
-  const user = true;
-  const [data, setData] = useState([]);
+  const user = useSelector((state) => state.auth.value);
+  const [data, setData] = useState(mockData);
+
+  console.log(user);
+
   return (
     <MainLayout>
       <div>
@@ -21,21 +24,20 @@ function Homepage() {
               feels like home
             </p>
             <div className='grid sm:flex gap-10 mt-10'>
-            {user.isLoggedIn ? (
-              <Link to='/profile' className='btn btn-primary'>
-                My Profile
+              {user.isLoggedIn ? (
+                <Link to='/profile' className='btn btn-primary'>
+                  My Profile
+                </Link>
+              ) : (
+                <Link to='/sign-up' className='btn btn-primary '>
+                  Join Us
+                </Link>
+              )}
+              <Link to='/browse' className='btn btn-ghost'>
+                <span>Browse more</span>
+                <MoveRight className='mt-0.5' />
               </Link>
-            ) : (
-              <Link to='/sign-up' className='btn btn-primary '>
-                Join Us
-              </Link>
-            )}
-             <Link to='/browse' className='btn btn-ghost'>
-              <span>Browse more</span>
-              <MoveRight className='mt-0.5' />
-            </Link>
-          </div>
-            
+            </div>
           </section>
 
           {/* CARD CONTAINER SECTION */}
