@@ -1,25 +1,14 @@
-import { MoveRight } from 'lucide-react';
+import { HandIcon, MoveRight } from 'lucide-react';
 import MainLayout from '../Layouts/MainLayout';
 import ItemCard from '../components/ItemCard';
-
-// import { mockData as data } from '../data/mock-data';
+import { mockData as data } from '../data/mock-data';
 
 import mockData from '../data/mock-data.json';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-
 function Homepage() {
   const user = true;
   const [data, setData] = useState([]);
-
-  useEffect(() => {
-    fetch('https://coding-fairy.com/api/mock-api-resources/real-estate/allposts')
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data);
-      });
-  }, []);
-
   return (
     <MainLayout>
       <div>
@@ -31,23 +20,22 @@ function Homepage() {
               If you're looking for a place where you can be yourself, don't give up. Keep searching until you find a place that
               feels like home
             </p>
-
             <div className='grid sm:flex gap-10 mt-10'>
-              {user ? (
-                <Link to='/' className='btn btn-primary'>
-                  My Profile
-                </Link>
-              ) : (
-                <Link to='/sign-up' className='btn btn-primary'>
-                  Join Us
-                </Link>
-              )}
-
-              <Link to='/browse' className='btn btn-ghost'>
-                <span>Browse more</span>
-                <MoveRight className='mt-0.5' />
+            {user.isLoggedIn ? (
+              <Link to='/profile' className='btn btn-primary'>
+                My Profile
               </Link>
-            </div>
+            ) : (
+              <Link to='/sign-up' className='btn btn-primary '>
+                Join Us
+              </Link>
+            )}
+             <Link to='/browse' className='btn btn-ghost'>
+              <span>Browse more</span>
+              <MoveRight className='mt-0.5' />
+            </Link>
+          </div>
+            
           </section>
 
           {/* CARD CONTAINER SECTION */}

@@ -11,16 +11,6 @@ const ItemDetailPage = () => {
   const mockData = data.filter((eachData) => eachData.id === Number(itemId.id))[0];
 
   const [newData, setNewData] = useState();
-
-  useEffect(() => {
-    fetch(`https://coding-fairy.com/api/mock-api-resources/real-estate/allposts/${itemId.id}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setNewData(data);
-        console.log(data);
-      });
-  }, []);
-
   return (
     <MainLayout>
       <div className='max-w-screen-xl mx-auto min-h-[80vh] px-2 flex flex-col py-10'>

@@ -3,22 +3,15 @@ import ItemCard from '../components/ItemCard';
 
 import { useEffect, useState } from 'react';
 import mockData from '../data/mock-data.json';
+import { Router } from 'react-router-dom';
+
 
 const BrowsePage = () => {
   const [searchValue, setSearchValue] = useState('');
 
   const [data, setData] = useState([]);
   const [backUp, setBackUpData] = useState([]);
-
-  useEffect(() => {
-    fetch('https://coding-fairy.com/api/mock-api-resources/real-estate/allposts')
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data);
-        setBackUpData(data);
-      });
-  }, []);
-
+  
   const handleChangeType = (e) => {
     const inputType = e.target.value;
 

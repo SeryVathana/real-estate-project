@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { logOut } from '../redux/slices/authSlice';
 import { supabase } from '..';
 
+
 function Nav() {
   const user = useSelector((state) => state.auth.value);
   const dispatch = useDispatch();
@@ -22,6 +23,7 @@ function Nav() {
     dispatch(logOut());
     navigate('/sign-in');
   };
+  
 
   return (
     <div className='max-w-screen border-b border-gray-300'>
@@ -39,15 +41,8 @@ function Nav() {
                   <a>Browse</a>
                 </li>
                 <li>
-                  <a>Categories</a>
-                  <ul className='p-2'>
-                    <li>
-                      <a>Villa</a>
-                    </li>
-                    <li>
-                      <a>House</a>
-                    </li>
-                  </ul>
+                  <a>Home</a>
+                 
                 </li>
                 <li>
                   <a>About Us</a>
@@ -69,7 +64,7 @@ function Nav() {
             </li>
             <li>
               <details>
-                <summary>Categories</summary>
+                <summary>Home</summary>
                 <ul className='p-2'>
                   <li>
                     <Link to={'/'}>Villa</Link>
@@ -101,10 +96,10 @@ function Nav() {
 
               <ul tabIndex={0} className='dropdown-content z-[1] menu p-2 shadow-lg border bg-base-100 rounded-xl w-52'>
                 <li>
-                  <a>Profile</a>
+                <Link to='/profile'>Profile</Link>
                 </li>
                 <li>
-                  <a>Create Post</a>
+                <Link to='/create-post'>Create Post</Link>
                 </li>
                 <div className='divider my-0'></div>
                 <li onClick={(e) => handleLogOut(e)}>
