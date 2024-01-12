@@ -1,8 +1,6 @@
 import MainLayout from '../Layouts/MainLayout';
 import ItemCard from '../components/ItemCard';
-
 import { useEffect, useState } from 'react';
-import mockData from '../data/mock-data.json';
 import { collection, onSnapshot } from 'firebase/firestore';
 import { db } from '../config/firebaseconfig';
 

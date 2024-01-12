@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const ItemCard = ({ item }) => {
   return (
     <Link to={`/item/${item.id}`} className='card bg-base-100 border rounded-md shadow-sm'>
-      <figure className='h-1/2'>
+      <figure className='h-[200px]'>
         <img src={item.displayImage} alt='home' className='h-full w-full object-cover' />
       </figure>
       <div className='p-3 sm:space-y-2'>
@@ -16,7 +16,7 @@ const ItemCard = ({ item }) => {
         <div className='divider my-0 sm:my-5'></div>
         <div className='grid grid-cols-1 sm:grid-cols-2 gap-2'>
           <div className='flex items-center gap-2 text-gray-500'>
-            <MapPin className='w-4 h-4' />
+            <MapPin className='min-w-4 min-h-4' />
             <p className='text-xs line-clamp-1'>{item.details.location.join(',')}</p>
           </div>
           <div className='flex items-center gap-2 text-gray-500'>
