@@ -2,6 +2,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { logOut } from '../redux/slices/authSlice';
 import { supabase } from '..';
+import { signOut } from 'firebase/auth';
+import { auth } from '../config/firebaseconfig';
 
 function Nav() {
   const user = useSelector((state) => state.auth.value);
@@ -13,14 +15,16 @@ function Nav() {
   const handleLogOut = async (e) => {
     e.preventDefault();
 
-    const { error } = await supabase.auth.signOut();
-
-    if (error) {
-      console.log(error);
-    }
-
-    dispatch(logOut());
-    navigate('/sign-in');
+    signOut(auth)
+      .then(() => {
+        dispatch(logOut());
+        navigate('/sign-in');
+      })
+      .catch((err) => {
+        if (err) {
+          console.log(err);
+        }
+      });
   };
 
   return (
@@ -36,16 +40,16 @@ function Nav() {
               </div>
               <ul tabIndex={0} className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52'>
                 <li>
-                  <a>Browse</a>
+                  <a href='/'>Home</a>
                 </li>
                 <li>
-                  <a>Home</a>
+                  <a href='/browse'>Browse</a>
                 </li>
                 <li>
-                  <a>About Us</a>
+                  <a href='/sign-in'>Sign in</a>
                 </li>
                 <li>
-                  <a>Create an account</a>
+                  <a href='/sign-up'>Create an account</a>
                 </li>
               </ul>
             </div>
@@ -82,13 +86,17 @@ function Nav() {
               </div>
 
               <ul tabIndex={0} className='dropdown-content z-[1] menu p-2 shadow-lg border bg-base-100 rounded-xl w-52'>
-                <li>
-                  <Link to='/profile'>Profile</Link>
-                </li>
+                <p className='px-4 py-1 opacity-80'>Role: {user.userRole.toUpperCase()}</p>
                 {user.userRole === 'admin' ? (
-                  <li>
-                    <Link to='/create-post'>Create Post</Link>
-                  </li>
+                  <>
+                    <div className='divider my-0'></div>
+                    <li>
+                      <Link to='/dashboard'>Dashboard</Link>
+                    </li>
+                    <li>
+                      <Link to='/create-post'>Create Post</Link>
+                    </li>
+                  </>
                 ) : null}
                 {user.userRole === 'seller' ? (
                   <li>

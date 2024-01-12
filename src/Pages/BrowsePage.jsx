@@ -1,14 +1,31 @@
 import MainLayout from '../Layouts/MainLayout';
 import ItemCard from '../components/ItemCard';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import mockData from '../data/mock-data.json';
+import { collection, onSnapshot } from 'firebase/firestore';
+import { db } from '../config/firebaseconfig';
 
 const BrowsePage = () => {
   const [searchValue, setSearchValue] = useState('');
 
-  const [data, setData] = useState(mockData);
-  const [backUp, setBackUpData] = useState(mockData);
+  const [data, setData] = useState([]);
+  const [backUp, setBackUpData] = useState([]);
+
+  const dbCollectionRef = collection(db, 'posts');
+  // console.log(user);
+
+  useEffect(() => {
+    onSnapshot(dbCollectionRef, (snapshot) => {
+      let posts = [];
+      snapshot.docs.forEach((doc) => {
+        posts.push({ ...doc.data(), id: doc.id });
+      });
+
+      setData(posts);
+      setBackUpData(posts);
+    });
+  }, []);
 
   const handleChangeType = (e) => {
     const inputType = e.target.value;

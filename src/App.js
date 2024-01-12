@@ -5,6 +5,7 @@ import BrowsePage from './Pages/BrowsePage';
 import SignUpPage from './Pages/SignUpPage';
 import SignInPage from './Pages/SignInPage';
 import ItemDetailPage from './Pages/ItemDetailPage';
+import CreatePostPage from './Pages/CreatePostPage';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -13,6 +14,7 @@ const router = createBrowserRouter(
       <Route path='browse' element={<BrowsePage />} />
       <Route path='sign-up' element={<SignUpPage />} />
       <Route path='sign-in' element={<SignInPage />} />
+      <Route path='create-post' element={<CreatePostPage />} />
       <Route path='item/:id' element={<ItemDetailPage />} />
     </Route>
   )

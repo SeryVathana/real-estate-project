@@ -5,6 +5,8 @@ import { logIn } from '../redux/slices/authSlice';
 import { useState } from 'react';
 
 import { supabase } from '../index';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../config/firebaseconfig';
 
 const SignInPage = () => {
   const dispatch = useDispatch();
@@ -12,6 +14,7 @@ const SignInPage = () => {
 
   const [inputEmail, setInputEmail] = useState('');
   const [inputPassword, setInputPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleLogIn = async (e) => {
     e.preventDefault();
@@ -21,13 +24,20 @@ const SignInPage = () => {
       password: inputPassword,
     };
 
-    const { data, error } = await supabase.auth.signInWithPassword(logInRequest);
+    try {
+      const loggedUser = await signInWithEmailAndPassword(auth, inputEmail, inputPassword);
 
-    const userInfo = data.user;
-    console.log(data);
+      // const userInfo = loggedUser.user.uid;
+      // console.log(userInfo);
+      setErrorMessage('');
+      navigate('/');
+    } catch (err) {
+      console.log(err);
+      setErrorMessage(err.message);
+    }
 
-    dispatch(logIn({ userName: 'Seung Sovannary', userId: userInfo.id, userEmail: userInfo.email }));
-    navigate('/');
+    // dispatch(logIn({ userName: 'Seung Sovannary', userId: userInfo.id, userEmail: userInfo.email }));
+    // navigate('/');
   };
 
   return (
@@ -61,6 +71,8 @@ const SignInPage = () => {
               className='input input-bordered w-full max-w-lg'
             />
           </label>
+
+          {errorMessage && <p className=' text-red-500'>Error: {errorMessage}</p>}
 
           <button type='submit' className='btn btn-primary mt-5'>
             Sign In

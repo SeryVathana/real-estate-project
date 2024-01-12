@@ -3,14 +3,28 @@ import { useSelector } from 'react-redux';
 import MainLayout from '../Layouts/MainLayout';
 import ItemCard from '../components/ItemCard';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import mockData from '../data/mock-data.json';
+import { db } from '../config/firebaseconfig';
+import { collection, onSnapshot } from 'firebase/firestore';
 function Homepage() {
   const user = useSelector((state) => state.auth.value);
-  const [data, setData] = useState(mockData);
+  const [data, setData] = useState([]);
 
-  console.log(user);
+  const dbCollectionRef = collection(db, 'posts');
+  // console.log(user);
+
+  useEffect(() => {
+    onSnapshot(dbCollectionRef, (snapshot) => {
+      let posts = [];
+      snapshot.docs.forEach((doc) => {
+        posts.push({ ...doc.data(), id: doc.id });
+      });
+
+      setData(posts);
+    });
+  }, []);
 
   return (
     <MainLayout>

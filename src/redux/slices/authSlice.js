@@ -6,7 +6,7 @@ const initialState = {
     userName: '',
     userId: '',
     userEmail: '',
-    userRole: 'buyer',
+    userRole: 'admin',
   },
 };
 
@@ -19,6 +19,7 @@ export const authSlice = createSlice({
       state.value.userName = action.payload.userName;
       state.value.userId = action.payload.userId;
       state.value.userEmail = action.payload.userEmail;
+      state.value.userRole = action.payload.userRole;
     },
     logOut: (state) => {
       state.value = initialState;

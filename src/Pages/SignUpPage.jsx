@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import MainLayout from '../Layouts/MainLayout';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import {auth} from '../config/firebaseconfig';
+import { auth, db } from '../config/firebaseconfig';
+import { doc, setDoc } from 'firebase/firestore';
 
 const SignUpPage = () => {
   const [inputFirstName, setInputFirstName] = useState('');
@@ -30,9 +31,22 @@ const SignUpPage = () => {
 
     console.log(signUpDatabaseRequest);
 
-    const newUser = await createUserWithEmailAndPassword(auth,inputEmail,inputPassword)
-  };
+    const newUser = await createUserWithEmailAndPassword(auth, inputEmail, inputPassword);
 
+    console.log(newUser.user.uid);
+
+    const newUserDB = await setDoc(doc(db, 'users', newUser.user.uid), {
+      email: newUser.user.email,
+      firstName: inputFirstName,
+      lastName: inputLastName,
+      phoneNumber: inputPhoneNumber,
+      pfURL: 'https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg',
+      role: inputRole,
+      createdAt: new Date(Date.now()).toISOString(),
+    });
+
+    console.log(newUserDB);
+  };
 
   return (
     <MainLayout>
